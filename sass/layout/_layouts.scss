@@ -1,0 +1,21 @@
+.header {
+  //padding: 32px 0;
+  position: relative;
+
+  @media (min-width: $desktop) {
+    
+    overflow: visible;
+  }
+}
+
+.about,
+.prices,
+.features,
+.masters,
+.gallery,
+.contacts {
+
+  @media (min-width: $desktop) {
+    padding: 130px 0;
+  }
+}

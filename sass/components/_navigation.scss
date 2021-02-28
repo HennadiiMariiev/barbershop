@@ -1,0 +1,116 @@
+.menu {
+    @media (max-width: $tablet - 1px) {
+        display: none;
+    }
+
+
+    @media (min-width: $tablet){
+        width: 546px;
+        position: absolute;
+        top: 82px;
+        left: 183px;
+        @include flexation(row, flex-start);
+
+        transform: translateY(-50%);
+        overflow: visible;
+    }
+    @media (min-width: $desktop){
+        width: 1030px;
+        top: 58px;
+        left: 155px;
+      @include flexation();
+    }
+  }
+
+.navbar {
+    @media (min-width: $tablet) {
+        @include flexation();
+
+    }
+    @media (min-width: $desktop) {
+        @include flexation();
+
+    }
+
+    &__item:not(:last-child) {
+        @media (min-width: $tablet) {
+            margin-right: 24px;
+        }
+        @media (min-width: $desktop) {
+            margin-right: 40px;
+        }
+    }
+
+    &__phone, 
+    &__link {
+        color: getColor('light');
+        @include transition-mixin(color);
+        @include text-style(12px, 600, 1.361, .1em);
+        padding: 12px 0;
+
+        @media (min-width: $desktop) {
+            padding: 16px 0;
+        }
+    }
+
+    &__link:hover,
+    &__link:focus,
+    &__phone:focus,
+    &__phone:hover {
+        color: getColor('accent');
+    }
+
+    &__phone {
+        @media (min-width: $tablet) {
+            margin-top: 4px;
+        }
+
+        @media (min-width: $desktop) {
+            margin-right: 40px;
+        }
+    }
+}
+
+.sidebar {
+    @include flexation();
+    
+    .header & {
+        display: none;
+    }
+
+    &__item {
+        @include flexation();
+    }
+
+    &::before {
+        @extend %pseudo-stick;
+        margin-right: 40px;
+        background-color: getColor('section-title');
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    &__link {
+        padding: 38px 0;
+        font-family: 'Open Sans', sans-serif;
+        @include text-style(11px, 600, 1.361, .02em);
+        color: getColor('section-title');    
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: getColor('accent');
+    }
+}
+
+.group-box {
+    margin-left: auto;
+    @media (min-width: $tablet) {
+        @include flexation(column-reverse, center, center);
+    }    
+    @media (min-width: $desktop) {
+        @include flexation(row);
+    }
+}

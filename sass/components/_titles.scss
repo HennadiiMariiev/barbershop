@@ -1,0 +1,32 @@
+.main-title {
+    font-family: 'Raleway', sans-serif;
+    @include text-style(48px, 700, 1.174, .05em);
+    color: getColor('light');
+    margin-bottom: 20px;
+
+    @media (min-width: $desktop) {
+        @include text-style(72px);
+
+    }
+}
+
+.small-title {
+    @include flexation(row, center, flex-start);
+    margin-bottom: 20px;
+
+    font-family: 'Open Sans', sans-serif;
+    
+    .hero & {
+        color: getColor('subtitle-opacity');
+    }
+
+    .hero &::before {
+        @extend %pseudo-stick;
+        margin-right: 20px;
+        background-color: getColor('subtitle-opacity');
+    }
+
+    @media (min-width: $desktop) {
+        @include text-style(11px, 600, 1.361, .1em, uppercase);
+    }
+}

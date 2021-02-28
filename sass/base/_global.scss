@@ -1,0 +1,36 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    @include text-style(14px, 400, 1.857, .02em);
+  
+    color: getColor('primary');
+
+
+/*     @media (max-width: $tablet - 1px){
+      padding-top: $mobile-section-padding;
+    } */
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }

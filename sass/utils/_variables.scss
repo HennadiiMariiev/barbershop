@@ -1,0 +1,48 @@
+// main-container width
+$container-width: 1200px;
+
+// device-width 
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
+
+// main sections top and bottom paddings
+$mobile-section-padding: 60px;
+$desktop-section-padding: 94px;
+
+// footer padding
+$footer-padding: 60px;
+
+// social ICON size
+$social-icon-width: 20px;
+$social-icon-height: 20px;
+
+// modal size
+$compact-modal-width: 450px;
+$normal-modal-width: 528px;
+$normal-modal-height: 581px;
+
+// variables for ALL animation
+$cubic-function-variable: cubic-bezier(0.4, 0, 0.2, 1);
+$animation-time: 250ms;
+
+
+// COLORS
+$colors: (
+    'light': rgb(255,255,255),
+    'primary': rgb(85,85,85),
+    'logo': rgb(30,30,30),
+    'subtitle': rgb(157,164,189),
+    'section-title': rgb(48,48,48),
+    'subtitle-opacity': rgba(157,164,189, .6),
+    'accent': rgb(255,108,0),
+    'background-dark': rgb(25,28,38),
+    'hero-gradient': rgba(25,28,38, .2),
+    'gradient-one': rgb(23, 26, 36),
+    'gradient-two': rgb(9, 11, 19)
+    
+);
+
+@function getColor($key: 'primary') {
+    @return map-get($colors, $key);
+}

@@ -1,0 +1,61 @@
+.contact-form {
+    background-color: getColor('background-dark');
+    height: 557px;
+}
+
+.form__box,
+.contacts__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__tel, 
+    &__name,
+    &__textarea {
+        width: 100%;
+        border: 0;
+        background-color: transparent;
+        color: rgba(getColor('subtitle'), .4);
+        @include text-style(11px, 600, 1.136, .1em, uppercase);
+    
+        border-bottom: 1px solid rgba(getColor('subtitle'), .4);
+        padding-bottom: 8px;
+        margin-bottom: 44px;
+        cursor: pointer;
+        //@include 
+    }
+
+    &__textarea {
+        height: 76px;
+    }
+
+    &__tel:hover &__tel::placeholder, 
+    &__name:hover &__name::placeholder{
+        color: getColor('light');
+        border-color: getColor('light');
+    }
+}
+
+.contacts {
+    background-color: getColor('background-dark');
+    background-image: url('../images/contacts_back_mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 496px;
+
+    @media (min-width: $mobile + 1px) and (max-width: $tablet) {
+        background-image: url('../images/contacts_back_tablet.png');
+    }
+
+    @media (min-width: $tablet + 1px) {
+        background-image: url('../images/contacts_back_desktop.png');
+    }
+}

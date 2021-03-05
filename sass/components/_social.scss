@@ -1,4 +1,4 @@
-/* .social {
+.social {
     @include flexation();
 
     &__item {
@@ -19,30 +19,19 @@
         margin: 0;
       
         border-radius: 50%;
-        fill: getColor('social-icon');
+        fill: getColor('logo');
+        background-color: getColor('light');
 
-        @include transition-mixin(fill, background-color, border-color);
+        @include transition-mixin(fill);
     }
 
     &__link:hover,
-    &__link:focus,
-    .join &__link {
-        fill: getColor('active');        
-    }
-
-    .join &__link {
-        background-color: getColor('social-background');   
-    }
-
-    &__link:hover,
-    &__link:focus,
-    .join &__link:hover,
-    .join &__link:focus {
-        background-color: getColor('accent'); 
+    &__link:focus{
+        fill: getColor('accent');        
     }
 
     &__icon    {
         width: $social-icon-width;
         height: $social-icon-width;
     }
-} */
+}

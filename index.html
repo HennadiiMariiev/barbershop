@@ -10,6 +10,16 @@
     <!-- Header -->
     <header class="header">
       <div class="container">
+        <svg class="logo" width="69" height="56" aria-label="Logotype">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>     
+
+        <button class="toggle-button" data-menu-button aria-label="Переключатель мобильного меню" aria-expanded="false" aria-controls="menu-content">
+          <svg class="toggle-button__icon" width="24" height="16">
+            <use class="toggle-button__burger" href="./images/sprite.svg#icon-burger"></use>
+            <use class="toggle-button__cross" href="./images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
         <div class="menu">
           <ul class="navbar">
             <li class="navbar__item">
@@ -48,9 +58,6 @@
       <section class="hero">
         <div class="container">
           <div class="hero__left">
-            <svg class="logo" width="69" height="56" aria-label="Logotype">
-              <use href="./images/sprite.svg#icon-logo"></use>
-            </svg>     
             <ul class="sidebar">
               <li class="sidebar__item">
                 <a class="sidebar__link" href="#">YouTube</a>
@@ -76,77 +83,83 @@
         <div class="container">
           <ul class="images">
             <li class="images__item">
-              <img
-                src="/images/about_img1.jpg"
-                alt="Барбер бреет бороду клиенту."
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source srcset="/images/about_img1_tablet.jpg 1x, 
+                /images/about_img1_tablet@2x.jpg 2x"
+                media="(max-width: 1279px)">
+                <source srcset="/images/about_img1_desktop.jpg 1x, 
+                /images/about_img1_desktop@2x.jpg 2x"
+                media="(min-width: 1280px)">
+                <img src="/images/about_img1_desktop.jpg" alt="Барбер бреет бороду клиенту.">
+              </picture>
             </li>
             <li class="images__item">
-              <img
-                src="/images/about_img2.jpg"
-                alt="Барбер бреет затылок клиенту."
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source srcset="/images/about_img2_tablet.jpg 1x, 
+                /images/about_img2_tablet@2x.jpg 2x"
+                media="(max-width: 1279px)">
+                <source srcset="/images/about_img2_desktop.jpg 1x, 
+                /images/about_img2_desktop@2x.jpg 2x"
+                media="(min-width: 1280px)">
+                <img src="/images/about_img2_desktop.jpg" alt="Барбер бреет затылок клиенту.">
+              </picture>
             </li>
           </ul>
-          <p class="small-title">О нас</p>
-          <h2 class="section-title">Лучший Барбершоп твоего города</h2>
-          <p class="about__paragraph">
-            Если ты хочешь добавить в свой образ больше уверенности – тебе точно к
-            нам.
-          </p>
-          <p class="about__text">
-            Мы команда, которая никогда не останавливается на достигнутом и жаждет
-            перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не
-            сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
-            волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам
-            приходит!
-          </p>
-          <button class="button" type="button">онлайн-запись</button>
+          <div class="about__box">
+            <p class="small-title">О нас</p>
+            <h2 class="section-title">Лучший Барбершоп твоего города</h2>
+            <p class="about__paragraph">
+              Если ты хочешь добавить в свой образ больше уверенности – тебе точно к
+              нам.
+            </p>
+            <p class="about__text">
+              Мы команда, которая никогда не останавливается на достигнутом и жаждет
+              перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не
+              сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
+              волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам
+              приходит!
+            </p>
+            <button class="button" type="button">онлайн-запись</button>  
+          </div>
         </div>
       </section>
 
       <!-- Prices -->
-      <section class="prices">
+      <section class="price">
         <div class="container">
-          <p class="small-title">Проведи время в компании лучших мастеров</p>
-          <h2 class="section-title">Услуги и цены</h2>
-          <div class="all-pries">
-            <ul class="price__list light">
+          <p class="small-title--light">Проведи время в компании лучших мастеров</p>
+          <h2 class="section-title--light">Услуги и цены</h2>
+          <div class="all-prices">
+            <ul class="price__list--light">
               <li class="price__item">
-                Мужская стрижка <span class="price__text">от 300 грн.</span>
+                <span class="price__text">Мужская стрижка</span><span class="price__pseudo"></span><span class="price__text">от 300 грн.</span>
               </li>
               <li class="price__item">
-                Стрижка бороды <span class="price__text">от 200 грн.</span>
+                <span class="price__text">Стрижка бороды</span><span class="price__pseudo"></span><span class="price__text">от 200 грн.</span>
               </li>
               <li class="price__item">
-                Стрижка усов <span class="price__text">от 200 грн.</span>
+                <span class="price__text">Стрижка усов</span><span class="price__pseudo"></span><span class="price__text">от 200 грн.</span>
               </li>
               <li class="price__item">
-                Бритье опасной бритвой
-                <span class="price__text">от 200 грн.</span>
+                <span class="price__text">Бритье опасной бритвой</span><span class="price__pseudo"></span><span class="price__text">от 200 грн.</span>
               </li>
             </ul>
-            <ul class="price__list dark">
+            <ul class="price__list--dark">
               <li class="price__item">
-                Cтрижка у стажера <span class="price__text">от 50 грн.</span>
+                <span class="price__text">Cтрижка у стажера</span><span class="price__pseudo"></span><span class="price__text">от 50 грн.</span>
               </li>
               <li class="price__item">
-                Стрижка под насадку <span class="price__text">от 200 грн.</span>
+                <span class="price__text">Стрижка под насадку</span><span class="price__pseudo"></span><span class="price__text">от 200 грн.</span>
               </li>
               <li class="price__item">
-                Детская стрижка (до 12 лет)
-                <span class="price__text">от 300 грн.</span>
+                <span class="price__text">Детская стрижка (до 12 лет)</span><span class="price__pseudo"></span><span class="price__text">от 300 грн.</span>
               </li>
               <li class="price__item">
-                Камуфлирование седины <span class="price__text">от 200 грн.</span>
+                <span class="price__text">Камуфлирование седины</span><span class="price__pseudo"></span><span class="price__text">от 200 грн.</span>
               </li>
             </ul>
           </div>
-          <button class="button" type="button">онлайн-запись</button>
+          <button class="button--light" type="button">онлайн-запись</button>
         </div>
       </section>
 
@@ -164,19 +177,19 @@
           <ul class="features__list">
             <li class="features__item">
               <span class="features__count">600</span
-              ><span class="features__text">Довольных клиентов в день</span>
+              ><span class="features__subtext">Довольных клиентов в день</span>
             </li>
             <li class="features__item">
               <span class="features__count">50</span
-              ><span class="features__text">Наград за отличный сервис</span>
+              ><span class="features__subtext">Наград за отличный сервис</span>
             </li>
             <li class="features__item">
               <span class="features__count">20</span
-              ><span class="features__text">Лучших мастеров Киева</span>
+              ><span class="features__subtext">Лучших мастеров Киева</span>
             </li>
             <li class="features__item">
               <span class="features__count">100</span
-              ><span class="features__text">Подарков постоянным клиентам</span>
+              ><span class="features__subtext">Подарков постоянным клиентам</span>
             </li>
           </ul>  
         </div>
@@ -189,64 +202,151 @@
           <h2 class="section-title">Наши мастера</h2>
           <ul class="masters__list">
             <li class="masters__item">
-              <div class="thumb"></div>
+              <div class="thumb">
+                <picture>
+                  <source srcset="/images/barber1_mobile.jpg 1x, 
+                  /images/barber1_mobile@2x.jpg 2x"
+                  media="(max-width: 767px)">
+                  <source srcset="/images/barber1_tablet.jpg 1x, 
+                  /images/barber1_tablet@2x.jpg 2x"
+                  media="(max-width: 1279px)">
+                  <source srcset="/images/barber1_desktop.jpg 1x, 
+                  /images/barber1_desktop@2x.jpg 2x"
+                  media="(min-width: 1280px)">
+                  <img src="/images/barber1_desktop.jpg" alt="Барбер John Smith">
+                </picture>  
+              </div>
               <div class="masters__meta">
                 <h3 class="masters__name">John Smith</h3>
                 <p class="masters__occupation">Extreme Barber</p>
-                <ul class="socials">
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Instagram">
+                        <use href="./images/sprite.svg#icon-instagram-2"></use>
+                    </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Twitter">
+                      <use href="./images/sprite.svg#icon-twitter-1"></use>
+                  </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Facebook">
+                      <use href="./images/sprite.svg#icon-facebook-1"></use>
+                  </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Instagram">
+                      <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                  </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="masters__item">
-              <div class="thumb"></div>
+              <div class="thumb">
+                <picture>
+                <source srcset="/images/barber2_mobile.jpg 1x, 
+                /images/barber2_mobile@2x.jpg 2x"
+                media="(max-width: 767px)">
+                <source srcset="/images/barber2_tablet.jpg 1x, 
+                /images/barber2_tablet@2x.jpg 2x"
+                media="(max-width: 1279px)">
+                <source srcset="/images/barber2_desktop.jpg 1x, 
+                /images/barber2_desktop@2x.jpg 2x"
+                media="(min-width: 1280px)">
+                <img src="/images/barber2_desktop.jpg" alt="Барбер Michele Doe">
+              </picture>  
+              </div>
               <div class="masters__meta">
                 <h3 class="masters__name">Michele Doe</h3>
                 <p class="masters__occupation">Extreme Barber</p>
-                <ul class="socials">
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Instagram">
+                        <use href="./images/sprite.svg#icon-instagram-2"></use>
+                    </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Twitter">
+                      <use href="./images/sprite.svg#icon-twitter-1"></use>
+                  </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Facebook">
+                      <use href="./images/sprite.svg#icon-facebook-1"></use>
+                  </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Instagram">
+                      <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                  </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="masters__item">
-              <div class="thumb"></div>
+              <div class="thumb">
+                <picture>
+                <source srcset="/images/barber3_mobile.jpg 1x, 
+                /images/barber3_mobile@2x.jpg 2x"
+                media="(max-width: 767px)">
+                <source srcset="/images/barber3_tablet.jpg 1x, 
+                /images/barber3_tablet@2x.jpg 2x"
+                media="(max-width: 1279px)">
+                <source srcset="/images/barber3_desktop.jpg 1x, 
+                /images/barber3_desktop@2x.jpg 2x"
+                media="(min-width: 1280px)">
+                <img src="/images/barber3_desktop.jpg" alt="Барбер Alan Black">
+              </picture>  
+              </div>
               <div class="masters__meta">
                 <h3 class="masters__name">Alan Black</h3>
                 <p class="masters__occupation">Extreme Barber</p>
-                <ul class="socials">
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Instagram">
+                        <use href="./images/sprite.svg#icon-instagram-2"></use>
+                    </svg>
+                    </a>
+                </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Twitter">
+                      <use href="./images/sprite.svg#icon-twitter-1"></use>
+                  </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Facebook">
+                      <use href="./images/sprite.svg#icon-facebook-1"></use>
+                  </svg>
+                    </a>
                   </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
-                  </li>
-                  <li class="socials__item">
-                    <a href="#" class="socials__link"></a>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon" aria-label="Иконка приложения Instagram">
+                      <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                  </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -260,34 +360,93 @@
             <p class="small-title">На латинском языке “барба” означает “борода”</p>
             <h2 class="section-title visually-hidden">Галлерея</h2>
             <ul class="gallery__list">
-              <li class="gallery__thumb"><img src="" alt="" /></li>
-              <li class="gallery__thumb"><img src="" alt="" /></li>
-              <li class="gallery__thumb"><img src="" alt="" /></li>
-              <li class="gallery__thumb"><img src="" alt="" /></li>
+              <li class="gallery__thumb">
+                <picture>
+                  <source srcset="/images/gallery1_mobile.jpg 1x, 
+                  /images/gallery1_mobile@2x.jpg 2x"
+                  media="(max-width: 767px)">
+                  <source srcset="/images/gallery1_tablet.jpg 1x, 
+                  /images/gallery1_tablet@2x.jpg 2x"
+                  media="(max-width: 1279px)">
+                  <source srcset="/images/gallery1_desktop.jpg 1x, 
+                  /images/gallery1_desktop@2x.jpg 2x"
+                  media="(min-width: 1280px)">
+                  <img src="/images/gallery1_desktop.jpg" alt="Барбер стрижет клиента">
+                </picture>  
+              </li>
+              <li class="gallery__thumb">
+                <picture>
+                  <source srcset="/images/gallery2_mobile.jpg 1x, 
+                  /images/gallery2_mobile@2x.jpg 2x"
+                  media="(max-width: 767px)">
+                  <source srcset="/images/gallery2_tablet.jpg 1x, 
+                  /images/gallery2_tablet@2x.jpg 2x"
+                  media="(max-width: 1279px)">
+                  <source srcset="/images/gallery2_desktop.jpg 1x, 
+                  /images/gallery2_desktop@2x.jpg 2x"
+                  media="(min-width: 1280px)">
+                  <img src="/images/gallery2_desktop.jpg" alt="Барбер стрижет клиента">
+                </picture>  
+              </li>
+              <li class="gallery__thumb">
+                <picture>
+                  <source srcset="/images/gallery3_mobile.jpg 1x, 
+                  /images/gallery3_mobile@2x.jpg 2x"
+                  media="(max-width: 767px)">
+                  <source srcset="/images/gallery3_tablet.jpg 1x, 
+                  /images/gallery3_tablet@2x.jpg 2x"
+                  media="(max-width: 1279px)">
+                  <source srcset="/images/gallery3_desktop.jpg 1x, 
+                  /images/gallery3_desktop@2x.jpg 2x"
+                  media="(min-width: 1280px)">
+                  <img src="/images/gallery3_desktop.jpg" alt="Барбер стрижет клиента">
+                </picture>  
+              </li>
+              <li class="gallery__thumb">
+                <picture>
+                  <source srcset="/images/gallery4_mobile.jpg 1x, 
+                  /images/gallery4_mobile@2x.jpg 2x"
+                  media="(max-width: 767px)">
+                  <source srcset="/images/gallery4_tablet.jpg 1x, 
+                  /images/gallery4_tablet@2x.jpg 2x"
+                  media="(max-width: 1279px)">
+                  <source srcset="/images/gallery4_desktop.jpg 1x, 
+                  /images/gallery4_desktop@2x.jpg 2x"
+                  media="(min-width: 1280px)">
+                  <img src="/images/gallery4_desktop.jpg" alt="Барбер стрижет клиента">
+                </picture>  
+              </li>
             </ul>
           </div>
       </section>
 
       <!-- Contacts and Form-->
-      <section class="contacts">
+      <section class="contact-form">
         <div class="container">
-          <h2 class="section-title visually-hidden">Он-лайн запись и контакты</h2>
-          <form action="javascript:void(0);" class="form">
-            <h3 class="section-title">Онлайн-запись</h3>
-            <input type="text" class="form__name" placeholder="Имя" />
-            <input type="tel" class="form__tel" placeholder="Телефон" />
-            <label for="message" class="form__label">сообщение</label>
-            <textarea
-              class="form__textarea"
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <button type="submit" class="button">отправить</button>
-          </form>
+          <div class="form__box">
+            <h2 class="section-title visually-hidden">Он-лайн запись и контакты</h2>
+            <form action="javascript:void(0);" class="form">
+              <h3 class="section-title">Онлайн-запись</h3>
+              <input type="text" class="form__name" placeholder="Имя*" />
+              <input type="tel" class="form__tel" placeholder="Телефон*" />
+              <label for="message" class="form__label">сообщение</label>
+              <textarea
+                class="form__textarea"
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <button type="submit" class="button--light">отправить</button>
+            </form>
   
-          <div class="contacts">
+          </div>
+        </div>
+        </section>
+
+        <section class="contacts">    
+        <div class="container">
+          <div class="contacts__box">
             <h3 class="section-title">Контакты</h3>
             <ul class="contacts__list">
               <li class="contacts__item">
@@ -305,6 +464,7 @@
             <p class="small-title">время работы</p>
             <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
           </div>
+
         </div>
       </section>
     </main>

@@ -15,7 +15,27 @@
     margin-bottom: 20px;
 
     font-family: 'Open Sans', sans-serif;
-    
+    @include text-style(11px, 600, 1.363, .1em, uppercase);
+    font-family: Open Sans;
+
+    color: getColor('logo');
+
+    &--light {
+        @extend .small-title;
+        color: getColor('subtitle-opacity');
+    }
+
+    &--light::before, 
+    &::before {
+        @extend %pseudo-stick;
+        margin-right: 20px;
+        background-color: getColor('logo');
+    }
+
+    &--light::before {
+        background-color: getColor('subtitle-opacity');
+    }
+
     .hero & {
         color: getColor('subtitle-opacity');
     }
@@ -28,5 +48,47 @@
 
     @media (min-width: $desktop) {
         @include text-style(11px, 600, 1.361, .1em, uppercase);
+    }
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    @include text-style(28px, 700, 1.178, .05em);
+
+    color: getColor('logo');
+
+    &--light {
+        @extend .section-title;
+        color: getColor('light');
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 42px;
+    }
+
+    .about & {
+        @media (max-width: $tablet - 1px) {
+            width: 330px;
+        }
+    }
+
+    .price &,
+    .masters &,
+    .gallery &,
+    .contacts & {
+        margin-bottom: 44px;
+    }
+
+    .features &,
+    .masters &,
+    .contact-form &,
+    .contacts & {
+        @include text-style(42px, 700, 1.174, .05em);
+    }
+
+    .contact-form &,
+    .contacts & {
+        color: getColor('light');
     }
 }

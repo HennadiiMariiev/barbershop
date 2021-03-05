@@ -1,7 +1,10 @@
 .header {
   //padding: 32px 0;
-  position: relative;
-
+    position: relative;
+  @media (min-width: $tablet) {
+    
+    overflow: visible;
+  }
   @media (min-width: $desktop) {
     
     overflow: visible;
@@ -9,12 +12,16 @@
 }
 
 .about,
-.prices,
+.price,
 .features,
 .masters,
 .gallery,
+.contact-form,
 .contacts {
-
+  padding: 84px 0;
+  @media (min-width: $tablet) {
+    padding: 100px 0;
+  }
   @media (min-width: $desktop) {
     padding: 130px 0;
   }

@@ -1,0 +1,51 @@
+.about {
+    &__paragraph {
+        margin-bottom: 20px;
+        @include text-style(16px, 400, 1.625, .02em);
+
+        @media (min-width: $desktop) {
+            @include text-style(18px, 400, 1.666, .02em);
+        }
+    }
+
+    &__text {
+        @include text-style(14px, 400, 1.857, .02em);
+
+        margin-bottom: 40px;
+    }
+}
+
+
+.images {
+    display: none;
+
+    @media (min-width: $tablet) {
+        width: 330px;
+        display: block;
+        margin-right: 30px;
+    }
+
+    @media (min-width: $desktop) {
+        width: 570px;
+        @include flexation();
+        margin-right: 64px;
+    }
+
+    &__item {
+        @media (min-width: $tablet) {
+            width: 330px;
+        }
+        @media (min-width: $desktop) {
+            width: 270px;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media (max-width: $desktop - 1px) {
+            margin-bottom: 30px;
+        }
+        @media (min-width: $desktop) {
+            margin-right: 30px;
+        }
+    }
+}

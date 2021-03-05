@@ -1,0 +1,98 @@
+.price {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    @media (max-width: $mobile) {
+        background-color: rgb(17, 19, 25);
+        background-image: url('../images/price_background_mobile.png');
+    }
+    @media (min-width: $mobile + 1px) and (max-width: $tablet) {
+        background-color: rgb(17, 19, 25);
+        background-image: url('../images/price_background_tablet.png');
+        background-size: cover;
+    }
+    @media (min-width: $tablet + 1px) {
+        background-color: rgb(17, 19, 25);
+        background-image: url('../images/price_background_desktop.png');
+        background-size: cover;
+    }
+    @media (min-width: $desktop) {
+        background-size: contain;
+
+    }
+
+
+    &__list--light {
+        @media (max-width: $desktop - 1px) {
+            margin-bottom: 20px;
+        }   
+        @media (min-width: $desktop) {
+            background: linear-gradient(180deg, getColor('gradient-one') 0%, rgba(getColor('gradient-one'), 0.2) 100%);
+        }
+    }
+    &__list--dark {
+        @media (min-width: $desktop) {
+            background: linear-gradient(180deg, getColor('gradient-two') 0%, rgba(getColor('gradient-two'), 0.2) 100%);
+        }
+    }
+    
+    &__list--light,
+    &__list--dark {
+        color: getColor('subtitle');
+
+        @media (min-width: $desktop) {
+            padding: 30px 40px;
+            width: 585px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        display: inline-block;
+        flex-grow: 0;
+
+        @media (max-width: $tablet - 1px){
+            @include text-style(14px, 400, 2.142, .02em);
+        }
+        @media (min-width: $tablet){
+            @include text-style(18px, 400, 1.666, .02em);
+        }
+    }
+
+    &__text:not(:last-child) {
+        margin-right: 6px;
+    }
+
+    &__pseudo {
+        display: block;
+        height: 20px;
+        flex-grow: 2;
+        border-bottom: 1px solid rgba(getColor('subtitle'), .12);
+        margin-right: 6px;
+    }
+}
+
+.all-prices {
+    margin-bottom: 50px;
+
+    @media (max-width: $desktop - 1px) {
+        padding: 30px 40px;
+        background: linear-gradient(180deg, getColor('gradient-one') 0%, rgba(getColor('gradient-one'), 0.2) 100%);
+    }
+    @media (min-width: $desktop) {
+        display: flex;
+        justify-content: center;
+    }
+}
+

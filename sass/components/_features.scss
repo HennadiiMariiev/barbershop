@@ -1,0 +1,86 @@
+.features {
+    &__div {
+        width: 100%;
+        @media (min-width: $tablet) {
+            width: 500px;
+        }
+        @media (max-width: $desktop - 1px) {
+            margin-bottom: 44px;
+        }
+    }
+
+    &__text {
+        @include text-style(18px, 400, 1.666, .02em);
+        @media (max-width: $tablet - 1px) {
+            width: 381px;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: $tablet) and (max-width: $desktop - 1px) {
+            width: 450px;
+            margin-left: auto;
+        }
+        @media (min-width: $desktop) {
+            width: 370px;
+            margin-right: 130px;
+        }
+    }
+
+    &__item {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: getColor('section-title');
+        background-color: getColor('feature-background');
+
+        @media (max-width: $tablet - 1px) {
+            width: 193px;
+        }
+        @media (min-width: $tablet) {
+            width: 210px;
+        }
+        @media (min-width: $desktop) {
+            width: 170px;
+        }
+    }
+
+    &__item:nth-child(even) {
+        margin-top: 30px;
+    }
+    &__item:nth-child(odd) {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__count {
+        @include text-style(42px, 600, 1.361, .05em);
+        margin-bottom: 6px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    &__count::after {
+        content: '+';
+        display: inline-block;
+        margin-left: 3px;
+        @include text-style(16px, 600, 42px, .05em);
+        color: getColor('accent');
+
+        @media (min-width: $tablet) {
+            margin-left: 2px;
+        }
+    }
+
+    &__subtext {
+        @include text-style(11px, 600, 1.361, .02em);
+        text-align: center;
+        width: 133px;
+    }
+}
